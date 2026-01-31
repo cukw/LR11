@@ -1,0 +1,3 @@
+com\selenium\tests\tests\FormAuthenticationTest.class
+com\selenium\tests\base\baseTest.class
+com\selenium\tests\pages\LoginPage.class

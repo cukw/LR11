@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Internet Herokuapp Test Suite" parallel="false">
+    <test name="Form Authentication Tests">
+        <classes>
+            <class name="com.selenium.tests.tests.FormAuthenticationTest"/>
+        </classes>
+    </test>
+</suite>
