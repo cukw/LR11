@@ -22,13 +22,12 @@ public class baseTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         
-        // ✅ HEADLESS MODE - браузер работает в фоне!
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");              // БЕЗ видимого окна
-        options.addArguments("--disable-gpu");           // Отключи GPU
-        options.addArguments("--window-size=1920,1080"); // Размер экрана
-        options.addArguments("--no-sandbox");            // Linux совместимость
-        options.addArguments("--disable-dev-shm-usage"); // Предотврати крахи
+        options.addArguments("--headless");              
+        options.addArguments("--disable-gpu");           
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--no-sandbox");           
+        options.addArguments("--disable-dev-shm-usage");
         
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_SECONDS));

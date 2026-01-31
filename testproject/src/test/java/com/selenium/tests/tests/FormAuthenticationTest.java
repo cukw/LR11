@@ -12,15 +12,6 @@ import com.selenium.tests.pages.LoginPage;
  */
 public class FormAuthenticationTest extends baseTest {
 
-    /**
-     * POSITIVE TEST: Verify successful login with valid credentials
-     * Steps:
-     * 1. Navigate to login page
-     * 2. Enter valid username: tomsmith
-     * 3. Enter valid password: SuperSecretPassword!
-     * 4. Click login button
-     * Expected: Redirect to /secure with success message
-     */
     @Test(description = "Verify successful login with valid credentials")
     public void testLoginWithValidCredentials() {
         LoginPage loginPage = new LoginPage(driver, wait);
@@ -41,15 +32,6 @@ public class FormAuthenticationTest extends baseTest {
                 "URL should contain '/secure' after successful login");
     }
 
-    /**
-     * NEGATIVE TEST: Verify error message with invalid credentials
-     * Steps:
-     * 1. Navigate to login page
-     * 2. Enter invalid username
-     * 3. Enter invalid password
-     * 4. Click login button
-     * Expected: Stay on login page with error message
-     */
     @Test(description = "Verify error message with invalid credentials")
     public void testLoginWithInvalidCredentials() {
         LoginPage loginPage = new LoginPage(driver, wait);
@@ -69,9 +51,6 @@ public class FormAuthenticationTest extends baseTest {
                 "Should remain on login page after failed login");
     }
 
-    /**
-     * NEGATIVE TEST: Verify empty username validation
-     */
     @Test(description = "Verify error message with empty username")
     public void testLoginWithEmptyUsername() {
         LoginPage loginPage = new LoginPage(driver, wait);

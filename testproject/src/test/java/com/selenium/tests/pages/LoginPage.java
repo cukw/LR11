@@ -15,15 +15,12 @@ public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Locators - ИСПРАВЛЕНО!
     private By usernameField = By.id("username");
     private By passwordField = By.id("password");
     private By loginButton = By.cssSelector("button[type='submit']");
     
-    // ✅ ИСПРАВЛЕНО: Success message в <p> теге
     private By successMessage = By.xpath("//h4[@class='subheader']");
     
-    // ✅ ИСПРАВЛЕНО: Error message использует класс 'flash error'
     private By errorMessage = By.xpath("//div[@class='flash error']");
 
     public LoginPage(WebDriver driver, WebDriverWait wait) {
